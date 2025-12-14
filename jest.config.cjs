@@ -1,18 +1,18 @@
-const dotenv = require('dotenv')
+const dotenv = require("dotenv");
 dotenv.config({
-  path: '.env.development'
-})
+  path: ".env.development",
+});
 
-const nextJest = require('next/jest')
+const nextJest = require("next/jest");
 
 const createJestConfig = nextJest({
-  dir: '.'
-})
+  dir: ".",
+});
 const jestConfig = createJestConfig({
-  coverageProvider: 'v8',
-  testEnvironment: 'node',
-  moduleDirectories: ['node_modules', '<rootDir>'],
-  setupFilesAfterEnv: ['<rootDir>/setup.jest.js'],
-})
+  coverageProvider: "v8",
+  testEnvironment: "node",
+  moduleDirectories: ["node_modules", "<rootDir>"],
+  setupFilesAfterEnv: ["<rootDir>/setup.jest.js"],
+});
 
 module.exports = jestConfig;
