@@ -2,6 +2,7 @@
 services:
   # define que o serviço se chama database
   database:
+    container_name: "postgres_dev"
     # consome a imagem do dokerhub, alpine pois é a versão mais leve
     image: "postgres:18.1-alpine"
     env_file:
