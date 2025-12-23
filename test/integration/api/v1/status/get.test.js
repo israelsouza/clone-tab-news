@@ -1,8 +1,8 @@
 import { query } from "infra/database.js";
-import orchestrator from "test/orchestrator.js"
+import orchestrator from "test/orchestrator.js";
 
 beforeAll(async () => {
-  await orchestrator.waitForAllServices()
+  await orchestrator.waitForAllServices();
 });
 
 test("GET /api/v1/status deve retornar 200", async () => {
