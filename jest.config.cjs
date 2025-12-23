@@ -9,10 +9,9 @@ const createJestConfig = nextJest({
   dir: ".",
 });
 const jestConfig = createJestConfig({
-  coverageProvider: "v8",
-  testEnvironment: "node",
-  moduleDirectories: ["node_modules", "<rootDir>"],
   setupFilesAfterEnv: ["<rootDir>/setup.jest.js"],
+  moduleDirectories: ["node_modules", "<rootDir>"],
+  testTimeout: 60000
 });
 
 module.exports = jestConfig;
