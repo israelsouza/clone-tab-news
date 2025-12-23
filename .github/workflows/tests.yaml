@@ -1,0 +1,19 @@
+name: Run Automated Tests
+
+on: pull_request
+
+jobs:
+  jest:
+    name: Run Jest Tests Ubuntu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      # instala dependencias de forma 'congelada'/estritamente a mesma versão do arquivo LOCK sempre
+      - run: npm ci
+
+      - run: npm test
