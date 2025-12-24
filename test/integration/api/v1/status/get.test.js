@@ -1,4 +1,3 @@
-import { query } from "infra/database.js";
 import orchestrator from "test/orchestrator.js";
 
 beforeAll(async () => {
