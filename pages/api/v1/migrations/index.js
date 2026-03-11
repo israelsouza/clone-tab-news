@@ -17,7 +17,7 @@ export default async function migrations(req, res) {
       dbClient: dbClient,
       databaseUrl: process.env.DATABASE_URL,
       dryRun: true,
-      dir:  resolve("infra", "migrations"),
+      dir: resolve("infra", "migrations"),
       direction: "up",
       verbose: true,
       migrationsTable: "pgmigrations",
